@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="choi()">Chơi</button>
+</body>
+
+</html>
+<script>
+    function choi() {
+        let max = +prompt("Nhập số lớn nhất trong khoảng muốn chơi");
+        var a = Math.floor(Math.random() * max);
+        let b = +prompt("Số bạn chọn là:");
+        let count = 0
+        while (b !== a) {
+            count++;
+            if (count == 4) {
+                alert("Hết lượt!");
+                break;
+            } else if (b < a || b > a) {
+                alert("Sai rồi nè");
+            }
+            b = +prompt("Số bạn chọn là:");
+        }
+        if (b == a) {
+            alert("Xin chúc mừng, bạn đã chiến thắng!")
+        }
+
+    }
+</script>
